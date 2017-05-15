@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.server.json",
+  "compilerOptions": {
+    "outDir": "../build",
+    "module": "es2015",
+    "target": "es5"
+  },
   "angularCompilerOptions": {
     "genDir": "ngfactory",
     "entryModule": "./app/server-app.module#ServerAppModule"
   },
-  "exclude": []
+  "exclude": [
+    "./main.server.aot.ts"
+  ]
 }

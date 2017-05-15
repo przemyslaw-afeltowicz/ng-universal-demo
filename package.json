@@ -11,6 +11,9 @@
     "prebuild": "npm run clean",
     "prebuild:aot": "npm run clean",
     "prebuild:prod": "npm run clean",
+    "ngc": "ngc -p src/tsconfig.server.aot.json",
+    "help": "rollup --help",
+    "rollup": "rollup build/ngfactory/app/server-app.module.ngfactory.js --output=dist/bundle.js --format=cjs",
     "clean": "rimraf dist",
     "server": "nodemon dist/server.js",
     "watch": "webpack --watch"

@@ -1,5 +1,7 @@
 /node_modules/
 /dist/
+/build/
+/src/ngfactory/
 /lib/
 /yarn.lock
 *.log
