@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeView } from './home/home-view.component';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
+import { ActualAppService, AppService } from './app.service';
 
 
 @NgModule({
@@ -19,6 +20,9 @@ import { TransferHttpModule } from '../modules/transfer-http/transfer-http.modul
     ])
   ],
   declarations: [ AppComponent, HomeView ],
+  providers: [
+    { provide: AppService, useClass: ActualAppService }
+   ],
   exports: [ AppComponent ]
 })
 export class AppModule {}
