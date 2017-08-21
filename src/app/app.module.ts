@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { APP_BASE_HREF, CommonModule } from '@angular/common';
+import { PreloadAllModules, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeView } from './home/home-view.component';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
@@ -16,7 +15,7 @@ import { TransferHttpModule } from '../modules/transfer-http/transfer-http.modul
     RouterModule.forRoot([
       { path: '', component: HomeView, pathMatch: 'full'},
       { path: 'lazy', loadChildren: './+lazy/lazy.module#LazyModule'}
-    ])
+    ], { preloadingStrategy: PreloadAllModules })
   ],
   declarations: [ AppComponent, HomeView ],
   exports: [ AppComponent ]

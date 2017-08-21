@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewEncapsulation } from '@angular/core'
 import { TransferState } from '../modules/transfer-state/transfer-state';
 
 @Component({
@@ -9,11 +9,8 @@ import { TransferState } from '../modules/transfer-state/transfer-state';
     <a routerLink="/lazy">Lazy</a>
     <router-outlet></router-outlet>
   `,
-  styles: [
-    `h1 {
-      color: green;
-    }`
-  ]
+  styles: [require('./app.component.scss').toString()],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
   constructor(private cache: TransferState) {}

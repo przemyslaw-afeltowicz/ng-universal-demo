@@ -4,7 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'home-view',
-  template: `<h3>{{subs | async}}</h3>`
+  templateUrl: './home-view.component.html',
+  styles: [require('./home-view.component.scss').toString()]
 })
 export class HomeView implements OnInit {
   public subs: Observable<string>;

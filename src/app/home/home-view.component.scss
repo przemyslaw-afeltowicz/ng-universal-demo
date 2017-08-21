@@ -1,0 +1,9 @@
+@import '../styles/global';
+
+.head {
+  @include center();
+  font-size: 50px;
+  margin: 0;
+  background: $black;
+  color: $white;
+}
